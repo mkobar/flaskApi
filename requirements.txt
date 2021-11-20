@@ -16,7 +16,7 @@ colorama==0.4.4
 coverage==5.3
 decorator==4.4.2
 entrypoints==0.3
-flake8==3.8.4
+flake8==3.9.2
 Flask==1.1.4
 Flask-Cors==3.0.10
 Flask-DebugToolbar==0.11.0
