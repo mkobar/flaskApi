@@ -8,43 +8,39 @@ FlaskApi public code (initial)
 
 Web Search Proxy for Google, Bing, DDG and others.
 
-##How To run
+## How To run
 ```
 python searchApi/app.py
 ```
 
-##How to test
+## How to test
 ```
 pytest -v searchApi
 ```
 
-##How to update with pip
+## How to update with pip
 ```
 pip install -r requirements.txt --use-deprecated=legacy-resolver
 ```
 
-##Flake8 - Linter
+## Flake8 - Linter
 ```
 flake8 searchApi --max-line-length=120
 ```
 
-##Black - code formatter
+## Black - code formatter
 ```
 black searchApi
 ```
 
-##Bandit - source code security analyzer
+## Bandit - source code security analyzer
 ```
 bandit -r searchApi -lll -v --ignore-nosec
 ```
 
 ## Links
 
-http://timmyreilly.azurewebsites.net/python-pip-virtualenv-installation-on-windows/
-
 https://blog.hartleybrody.com/web-scraping-cheat-sheet/
-
-https://realpython.com/vim-and-python-a-match-made-in-heaven/#syntax-checkinghighlighting
 
 https://stackoverflow.com/questions/20035101/why-does-my-javascript-get-a-no-access-control-allow-origin-header-is-present
 
