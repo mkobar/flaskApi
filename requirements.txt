@@ -50,7 +50,7 @@ redis==3.5.3
 requests==2.25.0
 six==1.15.0
 smmap2==3.0.1
-soupsieve==2.0.1
+soupsieve==2.3.1
 SQLAlchemy==1.4.27
 SQLAlchemy-Utils==0.37.9
 stevedore==3.3.0
