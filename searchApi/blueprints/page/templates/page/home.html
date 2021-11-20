@@ -1,0 +1,92 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Search{% endblock %}
+{% block meta_description %}search proxy{% endblock %}
+
+{% block body %}
+  <div class="container sm-margin-top">
+    <div class="row text-center">
+      <div class="col-lg-4">
+        <h2>Raw Web Search</h2>
+        <p class="text-muted">Returns the raw HTML from search results.</p>
+      </div>
+      <div class="col-lg-4">
+        <h2>Web Search</h2>
+        <p class="text-muted">Returns data from HTML search results.</p>
+      </div>
+      <div class="col-lg-4">
+        <h2>API/JSON Results</h2>
+        <p class="text-muted">Returns API response to search.</p>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col-lg-4">
+        <p>
+          <a href="raw/google?q=goats%20in%20trees" class="btn btn-default">Google</a>
+        </p>
+      </div>
+      <div class="col-lg-4">
+        <p>
+          <a href="search/google?q=goats+in+trees" class="btn btn-default">Google</a>
+        </p>
+      </div>
+
+      <div class="col-lg-4">
+        <p>
+          <a href="api/google?q=goats+in+trees" class="btn btn-default">Google</a>
+        </p>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col-lg-4">
+        <p>
+          <a href="raw/bing?q=goats%20in%20trees" class="btn btn-default">Bing</a>
+        </p>
+      </div>
+      <div class="col-lg-4">
+        <p>
+          <a href="search/bing?q=goats+in+trees" class="btn btn-default">Bing</a>
+        </p>
+      </div>
+      <div class="col-lg-4">
+        <p>
+          <a href="api/bing?q=goats+in+trees" class="btn btn-default">Bing</a>
+        </p>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col-lg-4">
+        <p>
+	<a href="raw/ddg?q=goats%20in%20trees" class="btn btn-default">DuckDuckGo</a>
+        </p>
+      </div>
+      <div class="col-lg-4">
+        <p>
+          <a href="search/ddg?q=goats+in+trees" class="btn btn-default">DuckduckGo</a>
+        </p>
+      </div>
+      <div class="col-lg-4">
+        <p>
+          <a href="api/ddg?q=goats+in+trees" class="btn btn-default">DuckDuckGo</a>
+        </p>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col-lg-4">
+        <p>
+	<a href="raw/multi?q=goats%20in%20trees" class="btn btn-default">Multi</a>
+        </p>
+      </div>
+      <div class="col-lg-4">
+        <p>
+          <a href="search/multi?q=goats+in+trees" class="btn btn-default">Multi</a>
+        </p>
+      </div>
+      <div class="col-lg-4">
+        <p>
+          <a href="api/multi?q=goats+in+trees" class="btn btn-default">Multi</a>
+        </p>
+      </div>
+    </div>
+  </div>
+{% endblock %}
