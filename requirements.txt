@@ -31,7 +31,7 @@ intervals==0.9.2
 itsdangerous==1.1.0
 Jinja2==2.11.3
 kombu==4.6.11
-MarkupSafe==1.1.1
+MarkupSafe==2.0.1
 mccabe==0.6.1
 more-itertools==8.11.0
 packaging==20.9
