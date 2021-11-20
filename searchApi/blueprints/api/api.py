@@ -269,4 +269,3 @@ def bingApi():
 # multiple engines
 def multipleEnginesApi():
     return '{"message": "ERROR: not yet supported"}'
-
