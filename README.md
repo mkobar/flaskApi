@@ -3,7 +3,6 @@
 ![Linted](https://img.shields.io/badge/linted-Flake8-orange.svg)
 ![Known Vulnerabilities](https://badgen.net/snyk/isearch/flaskapi)
 ![Security Scanner](https://img.shields.io/badge/security_scanner-Bandit-blue.svg)
-![Requires.io](https://img.shields.io/requires/github/mkobar/flaskapi.svg)
 
 FlaskApi public code (initial)
 
@@ -26,7 +25,7 @@ pip install -r requirements.txt --use-deprecated=legacy-resolver
 
 ##Flake8 - Linter
 ```
-flake8 iSearchWsApi --max-line-length=120
+flake8 searchApi --max-line-length=120
 ```
 
 ##Black - code formatter
@@ -36,7 +35,7 @@ black searchApi
 
 ##Bandit - source code security analyzer
 ```
-bandit -r iSearchWsApi -lll -v --ignore-nosec
+bandit -r searchApi -lll -v --ignore-nosec
 ```
 
 ## Links
