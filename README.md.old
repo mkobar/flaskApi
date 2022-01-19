@@ -1,0 +1,115 @@
+### Google Proxy Flask API using Python, Response and BeautifulSoup
+
+This proxy also displays web and raw web output (for debug)
+
+with Flask, Redis.
+
+- Flask blueprints
+- Testing and analyzing API code base (both mocked and live)
+- Logging, middleware and error handling
+- Responding with JSON from Flask and creating API requests
+
+## Python Dev setup
+
+
+### activate VirtualEnv (api2)/workon api2
+
+```
+C:\GitHub\flaskapi>workon api2
+```
+or
+```
+..\..\..\Envs\api2\Scripts\activate.bat
+```
+
+### run the Flask app
+
+```
+(api2) C:\GitHub\flaskapi>python SearchApi/app.py
+```
+
+### Unit and API testing (including live and mock API testing)
+
+```
+(api2) C:\GitHub\flaskapi>pytest -v SearchApi
+```
+
+## Endpoints to test
+
+Show static web page
+http://localhost:5000/
+
+Show response as web page (Raw HTML - what Google returns)
+http://localhost:5000/raw/google?q=malpractice
+
+Show response as web page (from parsed response data)
+http://localhost:5000/search/google?q=malpractice
+
+Send response as JSON (for API)
+http://localhost:5000/api/google?q=malpractice
+
+This can also be done interactivaly with Python on the command line:
+```
+(hello) C:\GitHub\flaskapi>python
+
+>>> import requests
+>>> response = requests.get("http://127.0.0.1:5000/api/google?q=malpractice")
+>>> response.json()
+```
+or with cURL:
+```
+curl http:///127.0.0.1:5000/api/google?q=malpractice
+```
+
+## gunicorn local with CygWin
+### virtualenv in CygWin
+```
+python3 /cygdrive/c/Users/x/AppData/Local/Programs/Python/Python37/Lib/site-packages/virtualenv.py .
+
+source bin/activate
+
+cd /cygdrive/c/Users/x/Documents/GitHub/flaskapi
+
+pip install -r requirements.txt
+
+```
+
+```
+$ gunicorn 'SearchApi.wsgi:create_app()'
+[2019-01-28 14:53:03 -0500] [16856] [INFO] Starting gunicorn 19.9.0
+[2019-01-28 14:53:03 -0500] [16856] [INFO] Listening at: http://127.0.0.1:8000 (16856)
+[2019-01-28 14:53:03 -0500] [16856] [INFO] Using worker: sync
+[2019-01-28 14:53:03 -0500] [15976] [INFO] Booting worker with pid: 15976
+/cygdrive/c/GitHub/flaskapi/lib/python3.6/site-packages/flask/sessions.py:208: UserWarning: "localhost" is not a valid cookie domain, it must contain a ".". Add an entry to your hosts file, for example "localhost.localdomain", and use that instead.
+  ' "{rv}.localdomain", and use that instead.'.format(rv=rv)
+[2019-01-28 14:54:13 -0500] [16856] [CRITICAL] WORKER TIMEOUT (pid:15976)
+[2019-01-28 14:54:13 -0500] [15976] [INFO] Worker exiting (pid: 15976)
+[2019-01-28 14:54:13 -0500] [2736] [INFO] Booting worker with pid: 2736
+[2019-01-28 14:54:29 -0500] [16856] [INFO] Handling signal: winch
+```
+
+```
+$ gunicorn --log-level=DEBUG 'SearchApi.wsgi:create_app("config.settings_production")'
+```
+
+```
+$ gunicorn --log-level=DEBUG --spew 'SearchApi.wsgi:create_app("config.settings_production")'
+```
+
+```
+$ gunicorn --bind 0.0.0.0:5000 SearchApi.wsgi
+
+or
+
+$ gunicorn SearchApi.wsgi
+```
+
+To test CygWin gunicorn:
+```
+http://localhost:5000/search/google?q=car%20seats
+
+or
+
+http://localhost:5000/
+```
+
