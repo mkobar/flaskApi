@@ -1,4 +1,4 @@
-amqp==5.0.9
+amqp==5.1.0
 appdirs==1.4.4
 atomicwrites==1.4.0
 attrs==21.4.0
