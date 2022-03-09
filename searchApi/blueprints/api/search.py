@@ -43,7 +43,9 @@ def google():
     # from
     # https://automatetheboringstuff.com/chapter11/
     q = request.args.get("q")  # not requests
+    #print (q + " showing search result in line 49")
     mock = request.args.get("mock")  # not requests
+    #print (str(mock) + " one line 51")
     blocked = request.args.get("blocked")  # not requests
     print("q = " + str(q))
     if mock:
@@ -82,6 +84,7 @@ def google():
         headers=headers_Get,
 
     )
+    #print(str(res) + "this is first 1")
     # res.raise_for_status() # not in production
     if (res.status_code >= 400) and (res.status_code < 500):
         """
@@ -117,15 +120,21 @@ def parseJsonResults(dicResults, q):
 
     # Open a browser tab for each result.
     # result_count = [0]
-
+    result_count = soup.select('div.LHJvCe')
     # linkElems = soup.select('.r a') # osearch links and titles
-    linkElems = soup.select("div.g div.rc div.r a")  # osearch links and titles
+    #linkElems = soup.select("div.g div.rc div.r a")  # osearch links and titles
+    linkElems = soup.select('.yuRUbf a') # osearch links and titles
+
     # abstractElems = soup.select('.st') # osearch snippets
     abstractElems = soup.select("div.g div.rc div.s div span.st")  # osearch snippets
+    #abstractElems = soup.select('a.k8XOCe') # osearch snippets
+    
     #    relatedSearches = soup.select('.aw5cc a') changed by google in may 2019
-    relatedSearches = soup.select("p.nVcaUb > a")
+    #relatedSearches = soup.select("p.nVcaUb > a")
+    relatedSearches = soup.select("a.EASEnb")
     # pprint(soup.select("p.nVcaUb > a")) # all a tag that inside p
     #   relatedQuestions = soup.select('.st span')
+    relatedQuestions = soup.select('a.k8XOCe')
     # for resultStats in soup.find_all("div", "sd"):
     #    result_count = soup.select('.resultStats div')
     #    print("resultStats =", result_count)
@@ -166,7 +175,8 @@ def parseJsonResults(dicResults, q):
     print("resultStats2 =", result_count)
 
     #   for titleElems in soup.find_all("div", "r"):
-    titleElems = soup.select(".r a")
+    #titleElems = soup.select(".r a")
+    titleElems = soup.select(".yuRUbf a")
     for x in range(len(titleElems)):
         title = titleElems[x].text
         print("title = " + title + "\n")
@@ -184,6 +194,10 @@ def parseJsonResults(dicResults, q):
         if verbose > 3:
             print("\n\nrelatedSearches")
             print(*relatedSearches, sep="\n")
+    if relatedQuestions:
+        if verbose > 3:
+            print("\n\nrelatedQuestions")
+            print(*relatedQuestions, sep="\n")
 
     #    print(*resultStats, sep = "\n")
     #    total_results = int(resultStats[0])
@@ -212,7 +226,11 @@ def parseJsonResults(dicResults, q):
   
     #===========================================
     html = html + "<h2>Related Questions</h2>"
-
+    for x in range(len(relatedQuestions)):
+        html = html + str(relatedQuestions[x])  + "<br>"
+        if verbose > 5:
+            print("relatedQuestions=" + str(len(relatedQuestions)) + " x=" + str(x) + "\n")
+    #======================================================
     html = html + "<h2>Organic Results</h2>"
     for x in range(len(linkElems)):
         html = html + str(linkElems[x]) + "<br>"

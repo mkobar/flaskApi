@@ -45,7 +45,8 @@ data = {
     "organic_results": [],
     "related_searches": [],
     "related_questions": [],
-    "pagination": {},
+    #"pagination": {},
+    "pagination": [],
 }
 
 
@@ -134,17 +135,33 @@ def googleApi():
     soup = BeautifulSoup(res.text, "html.parser")
     #   print("soup ="+soup)
     #   print(soup)
+    #======================
+    
+    # send results to text file
+    #with open('soupi.txt', 'w', encoding='utf-8') as f_out:
+    #    f_out.write(soup.prettify())
 
     # Open a browser tab for each result.
     # linkElems = soup.select('.r a') # osearch links and titles
-    linkElems = soup.select("div.g div.rc div.r a")  # osearch links and titles
+    #linkElems = soup.select("div.g div.rc div.r a")  # osearch links and titles
+    #linkElems = soup.select("div.yuRUbf div.rc div.DKV0Md a")  # osearch links and titles
+    linkElems = soup.select('.yuRUbf a') # osearch links and titles
+
     # abstractElems = soup.select('.st') # osearch snippets
-    abstractElems = soup.select("div.g div.rc div.s div span.st")  # osearch snippets
+    #abstractElems = soup.select("div.g div.rc div.s div span.st")  # osearch snippets
+    #abstractElems = soup.select("div.g div.rc div.s div a.k8XOCe")  # osearch snippets
+    abstractElems = soup.select('a.k8XOCe') # osearch snippets
+
+    pagination = soup.select('a.fl') # Checking for next page
+    local_results = soup.select('div.LHJvCe')
+
     #    relatedSearches = soup.select('.aw5cc a') changed by google in may 2019
-    relatedSearches = soup.select("p.nVcaUb > a")
+    #relatedSearches = soup.select("p.nVcaUb > a")
+    relatedSearches = soup.select("a.EASEnb")
     # pprint(soup.select("p.nVcaUb > a")) # all a tag that inside p
 
     #   relatedQuestions = soup.select('.st span')
+    relatedQuestions = soup.select('a.k8XOCe')
     result_count = 0  # default
     for i in soup.select("#resultStats"):  # id="resultStats"
         print("i.text: ")
@@ -177,7 +194,9 @@ def googleApi():
     print("resultStats2 =", result_count)
 
     #   for titleElems in soup.find_all("div", "r"):
-    titleElems = soup.select(".r a")
+    # titleElems = soup.select(".r a")
+    titleElems = soup.select(".yuRUbf a")
+    
     for x in range(len(titleElems)):
         title = titleElems[x].text
         print("title = " + title + "\n")
@@ -241,15 +260,33 @@ def googleApi():
         data1["organic_results"].append(
             {"position": position, "title": title, "link": link, "snippet": snippet}
         )
-
-    # "related_questions": []
-
+    
+    # "local_results": [ ]
+    if local_results:
+        for x in range(len(local_results)):
+            query = local_results[x].text
+            
+            data1["local_results"].append({"query": query})
+    # "Pagination": [ ]
+    if pagination:
+        for x in range(len(pagination)):
+            query = pagination[x].text
+            link = pagination[x]["href"]
+            data1["pagination"].append({"query": query, "link": link})
+    
     # "related_searches": [ ]
     if relatedSearches:
         for x in range(len(relatedSearches)):
             query = relatedSearches[x].text
             link = relatedSearches[x]["href"]
             data1["related_searches"].append({"query": query, "link": link})
+            
+    # "related_questions": []
+    if relatedQuestions:
+            for x in range(len(relatedQuestions)):
+                query = relatedQuestions[x].text
+                link = relatedQuestions[x]["href"]
+                data1["related_questions"].append({"query": query, "link": link})
 
     if verbose > 6:
         print("returned data1 out:")
