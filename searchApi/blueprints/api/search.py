@@ -35,8 +35,10 @@ data = {
     "pagination": {},
 }
 
-
-@search.route("/google")
+#original file
+#@search.route("/google")
+#moded by samson jan 29
+@search.route("/google", methods=["GET"])
 def google():
     # from
     # https://automatetheboringstuff.com/chapter11/
@@ -78,6 +80,7 @@ def google():
         + q
         + "&hl=en&gl=us&sourceid=chrome&ie=UTF-8",
         headers=headers_Get,
+
     )
     # res.raise_for_status() # not in production
     if (res.status_code >= 400) and (res.status_code < 500):
@@ -108,6 +111,7 @@ def parseJsonResults(dicResults, q):
     # Retrieve top search result links.
     # soup = BeautifulSoup(res.text,"html.parser")
     soup = BeautifulSoup(dicResults, "html.parser")
+    
     #   print("soup ="+soup)
     #   print(soup)
 
@@ -199,11 +203,14 @@ def parseJsonResults(dicResults, q):
     html = html + "<p> Total Results: " + str(total_results) + "<br>"
     if verbose > 5:
         print("<p>" + str(total_results) + "<br>")
-    html = html + "<h2>Related Searches</h2>"
+    #===========================================
+    html = html + "<h2>Related Searches</h2> "
     for x in range(len(relatedSearches)):
         html = html + str(relatedSearches[x]) + "<br><br>"
         if verbose > 5:
             print(str(relatedSearches[x]) + "<br><br>")
+  
+    #===========================================
     html = html + "<h2>Related Questions</h2>"
 
     html = html + "<h2>Organic Results</h2>"

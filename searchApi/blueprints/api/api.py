@@ -32,16 +32,19 @@ headers_Get = {
 
 # use SerpAPI format for easy digest
 data = {
+    
     "search_metadata": {},
+    
     "search_parameters": {},
+    "local_map": {},
     "search_information": {},
     "ads": [],
-    "local_map": {},
+    "answer_box": {},
     "local_results": [],
-    "related_questions": [],
     "answer_box": {},
     "organic_results": [],
     "related_searches": [],
+    "related_questions": [],
     "pagination": {},
 }
 
@@ -99,6 +102,7 @@ def googleApi():
             + "&hl=en&gl=us&sourceid=chrome&ie=UTF-8",
             headers=headers_Get,
         )
+    
     # res.raise_for_status() # not in production
     if (res.status_code >= 400) and (res.status_code < 500):
         print("Client ERROR Returned " + str(res.status_code))
