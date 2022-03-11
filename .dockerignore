@@ -1,0 +1,17 @@
+.git
+.gitignore
+.dockerignore
+.docker-env
+
+# data
+all_issues.csv
+api_issues.xlsx
+
+# tools
+get-issues.bat
+lint-and-fix.bat
+
+# have APIs
+runcoverageenv.bat
+rundevenv.bat
+runpytestenv.bat
