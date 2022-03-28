@@ -11,7 +11,7 @@ bs4==0.0.1
 celery==5.2.3
 certifi==2021.10.8
 chardet==4.0.0
-Click==8.0.4
+Click==8.1.0
 colorama==0.4.4
 coverage==6.3.2
 decorator==5.1.1
