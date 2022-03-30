@@ -19,7 +19,7 @@ entrypoints==0.4
 flake8==4.0.1
 Flask==2.1.0
 Flask-Cors==3.0.10
-Flask-DebugToolbar==0.12.1
+Flask-DebugToolbar==0.13.1
 Flask-WTF==1.0.0
 gitdb2==4.0.2
 GitPython==3.1.27
