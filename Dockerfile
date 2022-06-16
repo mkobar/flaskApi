@@ -1,7 +1,9 @@
 # Dockerfile
 # how to use: docker build -t isearch/flask-api:2.0.9 .
 
-FROM python:3.10-alpine
+#FROM python:3.10-alpine
+#FROM python:3.11.0b3-alpine3.16 - error in greenlet build
+FROM python:3.10.5-alpine3.16
 LABEL maintainer="Mike <mike@iterativesearch.com>"
 
 # required for image build
