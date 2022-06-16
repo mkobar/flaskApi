@@ -1,0 +1,7 @@
+# Build.txt - how to build and push Docker images for python
+docker build -t isearch/flask-api:2.10.6 . 
+docker build -t isearch/flask-api:latest .
+
+docker push isearch/flask-api:2.10.6
+docker push isearch/flask-api:latest
+
