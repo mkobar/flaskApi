@@ -158,3 +158,8 @@ config.py
 
 .docker-env
 
+# only for scanning
+/rootfs
+trivy.err
+trivy-results*
+

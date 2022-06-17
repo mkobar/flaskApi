@@ -15,3 +15,8 @@ lint-and-fix.bat
 /.pytest_cache
 /include
 /lib
+
+# only for scanning
+/rootfs
+trivy.err
+trivy-results*
