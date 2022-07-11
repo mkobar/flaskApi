@@ -1,6 +1,6 @@
 amqp==5.1.1
 appdirs==1.4.4
-atomicwrites==1.4.0
+atomicwrites==1.4.1
 attrs==21.4.0
 bandit==1.7.4
 beautifulsoup4==4.11.1
