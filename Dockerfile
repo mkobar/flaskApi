@@ -3,7 +3,7 @@
 
 #FROM python:3.10-alpine
 #FROM python:3.11.0b3-alpine3.16 - error in greenlet build
-FROM python:3.10.6-alpine3.16
+FROM python:3.10.7-alpine3.16
 LABEL maintainer="Mike <mike@iterativesearch.com>"
 
 # required for image build
