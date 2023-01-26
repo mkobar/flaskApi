@@ -39,4 +39,4 @@ jobs:
         # setprojectdir .
         # pytest searchApi
         #pytest ./searchApi
-        python -m pytest pytest searchApi
+        python -m pytest searchApi
