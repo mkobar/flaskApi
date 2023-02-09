@@ -62,4 +62,4 @@ wcwidth==0.2.6
 Werkzeug==2.2.2
 WTForms==3.0.1
 WTForms-Components==0.10.5
-zipp==3.12.1
+zipp==3.13.0
