@@ -59,7 +59,7 @@ urllib3==1.26.14
 validators==0.20.0
 vine==5.0.0
 wcwidth==0.2.6
-Werkzeug==2.2.2
+Werkzeug==2.2.3
 WTForms==3.0.1
 WTForms-Components==0.10.5
 zipp==3.13.0
