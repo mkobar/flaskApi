@@ -10,7 +10,7 @@ from searchApi.blueprints import mockdata
 
 class TestApiBing(object):
     def test_bing_api(self, client, live):
-        """ bing api should respond with a success 200. """
+        """bing api should respond with a success 200."""
         response = client.get(url_for("api.bingApi"))
         assert response.status_code == 200
 

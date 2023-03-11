@@ -10,7 +10,7 @@ from searchApi.blueprints import mockdata
 
 class TestApiMulti(object):
     def test_multi_api(self, client, live):
-        """ multi-engine api should respond with a success 200. """
+        """multi-engine api should respond with a success 200."""
         response = client.get(url_for("api.multipleEnginesApi"))
         assert response.status_code == 200
 

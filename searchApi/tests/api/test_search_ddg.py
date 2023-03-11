@@ -10,7 +10,7 @@ from searchApi.blueprints import mockdata
 
 class TestSearchDDG(object):
     def test_ddg_api(self, client, live):
-        """ ddg api should respond with a success 200. """
+        """ddg api should respond with a success 200."""
         response = client.get(url_for("search.ddg"))
         assert response.status_code == 200
 

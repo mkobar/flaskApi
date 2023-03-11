@@ -10,22 +10,22 @@ from searchApi.blueprints import mockdata
 
 class TestRaw(object):
     def test_google_raw(self, client, live):
-        """ google raw should respond with a success 200. """
+        """google raw should respond with a success 200."""
         response = client.get(url_for("raw.googleRaw") + "?q=test")
         assert response.status_code == 200
 
     def test_ddg_raw(self, client, live):
-        """ ddg api should respond with a success 200. """
+        """ddg api should respond with a success 200."""
         response = client.get(url_for("raw.ddgRaw"))
         assert response.status_code == 200
 
     def test_bing_raw(self, client, live):
-        """ bing api should respond with a success 200. """
+        """bing api should respond with a success 200."""
         response = client.get(url_for("raw.bingRaw"))
         assert response.status_code == 200
 
     def test_multi_raw(self, client, live):
-        """ multi-engine api should respond with a success 200. """
+        """multi-engine api should respond with a success 200."""
         response = client.get(url_for("raw.multipleEnginesRaw"))
         assert response.status_code == 200
 

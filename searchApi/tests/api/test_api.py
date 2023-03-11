@@ -10,22 +10,22 @@ from searchApi.blueprints import mockdata
 
 class TestApi(object):
     def test_google_api(self, client, live):
-        """ google api should respond with a success 200. """
+        """google api should respond with a success 200."""
         response = client.get(url_for("api.googleApi") + "?q=test")
         assert response.status_code == 200
 
     def test_ddg_api(self, client, live):
-        """ ddg api should respond with a success 200. """
+        """ddg api should respond with a success 200."""
         response = client.get(url_for("api.ddgApi"))
         assert response.status_code == 200
 
     def test_bing_api(self, client, live):
-        """ bing api should respond with a success 200. """
+        """bing api should respond with a success 200."""
         response = client.get(url_for("api.bingApi"))
         assert response.status_code == 200
 
     def test_multi_api(self, client, live):
-        """ multi-engine api should respond with a success 200. """
+        """multi-engine api should respond with a success 200."""
         response = client.get(url_for("api.multipleEnginesApi"))
         assert response.status_code == 200
 
