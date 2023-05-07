@@ -47,7 +47,7 @@ python-dotenv==1.0.0
 pytz==2023.3
 PyYAML==6.0
 redis==4.5.4
-requests==2.29.0
+requests==2.30.0
 six==1.16.0
 smmap2==3.0.1
 soupsieve==2.4.1
