@@ -56,7 +56,7 @@ SQLAlchemy-Utils==0.41.1
 stevedore==5.1.0
 toml==0.10.2
 typing-extensions==4.5.0
-urllib3==1.26.15
+urllib3==1.26.16
 validators==0.20.0
 vine==5.0.0
 wcwidth==0.2.6
