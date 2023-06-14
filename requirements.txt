@@ -4,7 +4,7 @@ atomicwrites==1.4.1
 attrs==23.1.0
 bandit==1.7.5
 beautifulsoup4==4.12.2
-billiard==3.6.4.0
+billiard==4.1.0
 black==23.3.0
 blinker==1.6.2
 bs4==0.0.1
