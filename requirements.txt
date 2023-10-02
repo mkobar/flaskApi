@@ -20,7 +20,7 @@ flake8==6.0.0
 Flask==2.3.3
 Flask-Cors==4.0.0
 Flask-DebugToolbar==0.13.1
-Flask-WTF==1.1.1
+Flask-WTF==1.2.1
 gitdb2==4.0.2
 GitPython==3.1.37
 gunicorn==21.2.0
