@@ -6,7 +6,7 @@ bandit==1.7.5
 beautifulsoup4==4.12.2
 billiard==4.1.0
 black==23.9.1
-blinker==1.6.2
+blinker==1.6.3
 bs4==0.0.1
 celery==5.3.4
 certifi==2023.7.22
