@@ -5,7 +5,7 @@ attrs==23.1.0
 bandit==1.7.5
 beautifulsoup4==4.12.2
 billiard==4.1.0
-black==23.10.0
+black==23.10.1
 blinker==1.6.3
 bs4==0.0.1
 celery==5.3.4
