@@ -1,7 +1,7 @@
 amqp==5.2.0
 appdirs==1.4.4
 atomicwrites==1.4.1
-attrs==23.1.0
+attrs==23.2.0
 bandit==1.7.6
 beautifulsoup4==4.12.2
 billiard==4.2.0
