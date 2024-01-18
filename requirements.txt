@@ -3,7 +3,7 @@ appdirs==1.4.4
 atomicwrites==1.4.1
 attrs==23.2.0
 bandit==1.7.6
-beautifulsoup4==4.12.2
+beautifulsoup4==4.12.3
 billiard==4.2.0
 black==23.12.1
 blinker==1.7.0
