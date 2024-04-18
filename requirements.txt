@@ -8,7 +8,7 @@ billiard==4.2.0
 black==24.4.0
 blinker==1.7.0
 bs4==0.0.2
-celery==5.3.6
+celery==5.4.0
 certifi==2024.2.2
 chardet==5.2.0
 Click==8.1.7
