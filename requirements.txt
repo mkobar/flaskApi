@@ -57,7 +57,7 @@ stevedore==5.2.0
 toml==0.10.2
 typing-extensions==4.11.0
 urllib3==2.2.1
-validators==0.28.2
+validators==0.28.3
 vine==5.1.0
 wcwidth==0.2.13
 Werkzeug==3.0.3
