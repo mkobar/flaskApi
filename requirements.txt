@@ -30,7 +30,7 @@ infinity==1.5
 intervals==0.9.2
 itsdangerous==2.2.0
 Jinja2==3.1.4
-kombu==5.3.7
+kombu==5.4.0
 MarkupSafe==2.1.5
 mccabe==0.7.0
 more-itertools==10.3.0
