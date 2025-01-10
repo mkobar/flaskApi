@@ -51,7 +51,7 @@ requests==2.32.3
 six==1.17.0
 smmap2==3.0.1
 soupsieve==2.6
-SQLAlchemy==2.0.36
+SQLAlchemy==2.0.37
 SQLAlchemy-Utils==0.41.2
 stevedore==5.4.0
 toml==0.10.2
