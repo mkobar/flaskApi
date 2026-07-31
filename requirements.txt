@@ -55,7 +55,7 @@ SQLAlchemy==2.0.51
 SQLAlchemy-Utils==0.41.2
 stevedore==5.4.0
 toml==0.10.2
-typing-extensions==4.12.2
+typing-extensions==4.16.0
 urllib3==2.7.0
 validators==0.34.0
 vine==5.1.0
