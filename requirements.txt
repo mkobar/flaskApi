@@ -9,7 +9,7 @@ black==26.3.1
 blinker==1.9.0
 bs4==0.0.2
 celery==5.4.0
-certifi==2024.12.14
+certifi==2026.7.22
 chardet==5.2.0
 Click==8.1.8
 colorama==0.4.6
