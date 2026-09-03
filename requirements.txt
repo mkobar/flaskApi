@@ -53,7 +53,7 @@ smmap2==3.0.1
 soupsieve==2.9.2
 SQLAlchemy==2.0.51
 SQLAlchemy-Utils==0.42.1
-stevedore==5.4.0
+stevedore==5.9.1
 toml==0.10.2
 typing-extensions==4.12.2
 urllib3==2.7.0
