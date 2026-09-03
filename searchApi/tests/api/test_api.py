@@ -40,6 +40,11 @@ class TestApi(object):
         # ('blocked', {"message": "blocked"}, 0),
     ),
 )
+@pytest.mark.xfail(
+    reason="scrapes live Google search results; fails when the CI runner has "
+    "no network access or Google blocks/rate-limits the automated request",
+    strict=False,
+)
 def test_google_api_live(client, query, count, live):
     response = client.get("/api/google?q=" + query)
 
