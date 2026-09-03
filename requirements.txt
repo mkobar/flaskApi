@@ -40,7 +40,7 @@ pluggy==1.6.0
 py==1.11.0
 pycodestyle==2.14.0
 pyflakes==3.4.0
-pyparsing==3.2.1
+pyparsing==3.3.2
 pytest==9.0.3
 pytest-cov==6.0.0
 python-dotenv==1.2.2
