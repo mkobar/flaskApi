@@ -13,7 +13,7 @@ certifi==2026.7.22
 chardet==7.6.0
 Click==8.5.0
 colorama==0.4.6
-coverage==7.16.0
+coverage==7.16.1
 decorator==5.3.1
 entrypoints==0.4
 flake8==7.3.0
