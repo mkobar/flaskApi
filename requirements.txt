@@ -38,7 +38,7 @@ packaging==26.3
 pbr==7.0.3
 pluggy==1.6.0
 py==1.11.0
-pycodestyle==2.14.0
+pycodestyle==2.15.0
 pyflakes==3.4.0
 pyparsing==3.3.2
 pytest==9.1.1
