@@ -39,7 +39,7 @@ pbr==7.0.3
 pluggy==1.6.0
 py==1.11.0
 pycodestyle==2.14.0
-pyflakes==3.4.0
+pyflakes==4.0.0
 pyparsing==3.3.2
 pytest==9.1.1
 pytest-cov==7.1.0
