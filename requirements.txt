@@ -44,7 +44,7 @@ pyparsing==3.3.3
 pytest==9.1.1
 pytest-cov==7.1.0
 python-dotenv==1.2.4
-pytz==2026.4
+pytz==2026.5
 PyYAML==6.0.3
 redis==8.1.0
 requests==2.34.2
