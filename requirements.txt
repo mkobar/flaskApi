@@ -52,7 +52,7 @@ six==1.17.0
 smmap2==3.0.1
 soupsieve==2.10
 SQLAlchemy==2.1.4
-SQLAlchemy-Utils==0.42.1
+SQLAlchemy-Utils==0.43.0
 stevedore==5.9.1
 toml==0.10.2
 typing-extensions==4.16.0
