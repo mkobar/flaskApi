@@ -46,7 +46,7 @@ pytest-cov==7.1.0
 python-dotenv==1.2.4
 pytz==2026.6
 PyYAML==6.0.3
-redis==8.1.0
+redis==8.2.0
 requests==2.34.2
 six==1.17.0
 smmap2==3.0.1
