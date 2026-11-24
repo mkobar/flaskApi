@@ -34,7 +34,7 @@ kombu==5.7.0
 MarkupSafe==3.0.4
 mccabe==0.7.0
 more-itertools==11.2.1
-packaging==26.3
+packaging==26.4
 pbr==7.1.3
 pluggy==1.7.0
 py==1.11.0
